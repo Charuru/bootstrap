@@ -148,6 +148,8 @@ angular.module('ui.bootstrap.typeahead', ['ui.bootstrap.position'])
 
         modelCtrl.$setViewValue(parserResult.modelMapper(scope, locals));
         modelCtrl.$render();
+        
+        element[0].focus();
       };
 
       //bind keyboard events: arrows up(38) / down(40), enter(13) and tab(9), esc(27)
