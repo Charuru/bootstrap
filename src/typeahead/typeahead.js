@@ -198,8 +198,9 @@ angular.module('ui.bootstrap.typeahead', ['ui.bootstrap.position'])
           $label: parserResult.viewMapper(originalScope, locals)
         });
 
+        resetMatches();        
+        scope.$emit('typeahead-select')
         //return focus to the input element if a mach was selected via a mouse click event
-        resetMatches();
         element[0].focus();
       };
 
