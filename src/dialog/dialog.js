@@ -21,6 +21,7 @@ dialogModule.provider("$dialog", function(){
     transitionClass: 'fade',
     triggerClass: 'in',
     resolve:{},
+    closeOnLocationChange: true,
     backdropFade: false,
     dialogFade:false,
     keyboard: true, // close with esc key
@@ -94,7 +95,8 @@ dialogModule.provider("$dialog", function(){
       };
 
       this.handleLocationChange = function() {
-        self.close();
+        if (options.closeOnLocationChange)
+          self.close();
       };
     }
 
